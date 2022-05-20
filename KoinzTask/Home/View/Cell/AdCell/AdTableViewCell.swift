@@ -8,7 +8,10 @@
 import UIKit
 
 class AdTableViewCell: UITableViewCell {
-
+    
+    static let cellID = "AdTableViewCell"
+    @IBOutlet weak var adImageOutlet: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -18,6 +21,10 @@ class AdTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func configure () {
+        adImageOutlet.image = UIImage(named: "adGoogle")
     }
     
 }

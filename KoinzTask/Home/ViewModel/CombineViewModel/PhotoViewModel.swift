@@ -35,7 +35,6 @@ protocol PhotoViewModelProtocol: AnyObject {
     var startGoToHomePagePublisher: Published<Bool>.Publisher { get }
     
     func fetchPhotoWithCombine(page: Int?, perPage: Int?)
-    func fetchPhotoWithAlamofire(page: Int?, perPage: Int?)
     
 }
 
@@ -106,8 +105,6 @@ class PhotoViewModel: PhotoViewModelProtocol {
             self.photoData = response.photos
             self.photo = response.photos?.photo ?? []
             
-            //self.photo?.append(contentsOf: response.photos?.photo ?? [])
-            
             if self.photo?.count ?? 0 < 20 {
                 
                 self.hasMoreFollower = false
@@ -122,38 +119,6 @@ class PhotoViewModel: PhotoViewModelProtocol {
             
         }
         .store(in: &subscriptions)
-    }
-    
-    func fetchPhotoWithAlamofire(page: Int?, perPage: Int?) {
-        //
-        isLoading = true
-        let api: PhotoAlamofireAPIProtocol = PhotoAlamofireAPI(page: page, perPage: perPage)
-        api.photos { [weak self] (result) in
-            guard let self = self else { return }
-            self.isLoading = false
-            switch result {
-            
-            case .success(let response):
-                
-                guard let data = response else { return }
-                print(data)
-                
-                self.photoModel = response
-                self.photoData = response?.photos
-                self.photo = response?.photos?.photo ?? []
-                
-                self.isReloading = true
-                
-            case .failure(let error):
-                
-                print(error.localizedDescription)
-                print(error.errorDescription ?? "")
-                self.isError = error.errorDescription ?? ""
-                print(self.isError)
-            
-            }
-        }
-        
     }
     
 }

@@ -24,12 +24,10 @@ extension Environment {
         case .testing:
             return "https://jsonplaceholder.typicode.com/"
         case .production:
-            return "https://ever-deliver.com/"
+            return "https://www.flickr.com/services/rest/?method=flickr.photos.search&format=json&nojsoncallback=50&text=Color&"
             
-            //https://ever-deliver.moltaqa-wo.net/
-            //http://b7fe-197-61-157-159.ngrok.io/
-            //http://10.0.0.251/laravel/ever-deliver/public/
-            //https://ever-deliver.com/
+            //https://www.flickr.com/services/rest/?method=flickr.photos.search&format=json&nojsoncallback=50&text=Color&page=1&per_page=20&api_key=d17378e37e555ebef55ab86c4180e8dc
+        
         }
     }
 }

@@ -1,0 +1,38 @@
+PODS:
+  - Alamofire (5.5.0)
+  - CombineCocoa (0.4.0)
+  - Kingfisher (7.1.2)
+  - RxCocoa (6.2.0):
+    - RxRelay (= 6.2.0)
+    - RxSwift (= 6.2.0)
+  - RxRelay (6.2.0):
+    - RxSwift (= 6.2.0)
+  - RxSwift (6.2.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - CombineCocoa
+  - Kingfisher
+  - RxCocoa
+  - RxSwift
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - CombineCocoa
+    - Kingfisher
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+
+SPEC CHECKSUMS:
+  Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  CombineCocoa: 68a050228ce7c53c1c5ac2c57cccf92a7f5c5085
+  Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
+  RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
+  RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
+  RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
+
+PODFILE CHECKSUM: f6fe64124edabbf63d0fb16562878d2f4ad6d748
+
+COCOAPODS: 1.11.2
